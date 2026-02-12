@@ -6,7 +6,42 @@ An agent skill for managing AI agent skills. Install, upgrade, list, and uninsta
 
 Skills Manager allows you to manage other skills through conversational commands with your AI agent (Claude Code or GitHub Copilot). No need to run scripts manually—just ask your agent!
 
+**Quick Start:** Run this one-liner to install:
+```powershell
+irm https://raw.githubusercontent.com/concaoccc/skill-manager/main/bootstrap.ps1 | iex
+```
+
 ## Installation
+
+### Quick Install (Bootstrap)
+
+Run this one-liner in PowerShell to install skills-manager itself:
+
+```powershell
+irm https://raw.githubusercontent.com/concaoccc/skill-manager/main/bootstrap.ps1 | iex
+```
+
+Or download and run the script manually:
+
+```powershell
+# Download the bootstrap script
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/concaoccc/skill-manager/main/bootstrap.ps1" -OutFile "$env:TEMP\install-skills-manager.ps1"
+
+# Run it
+& "$env:TEMP\install-skills-manager.ps1"
+```
+
+**What it does:**
+1. Checks if skills-manager is already installed in `%USERPROFILE%\.claude\skills\`
+2. If not found, downloads the repo to a temporary location
+3. Copies the `skills/skills-manager` folder to `%USERPROFILE%\.claude\skills\skills-manager`
+4. Cleans up temporary files
+
+After installation:
+1. Restart your AI chat session
+2. Start managing skills with natural language!
+
+### Manual Installation
 
 1. Install this skill to your agent using your preferred method
 2. Restart your AI chat session

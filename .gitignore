@@ -1,0 +1,38 @@
+# Agent development directories
+.claude/
+.github/copilot/
+.copilot/
+
+# Temporary files
+*.tmp
+*.temp
+~*
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor directories
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Node modules (if any)
+node_modules/
+
+# Python (if any)
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
